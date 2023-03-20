@@ -4,7 +4,8 @@
   "description": "big-react learn",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --ext .js,.jsx,.tsx,.ts --fix --quiet ./packages"
+    "lint": "eslint --ext .js,.jsx,.tsx,.ts --fix --quiet ./packages",
+    "build:dev": "rm -rf dist && rollup --bundleConfigAsCjs --config scripts/rollup/dev.config.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-replace": "^5.0.2",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
     "commitlint": "^17.4.4",
@@ -23,6 +26,8 @@
     "husky": "^8.0.3",
     "prettier": "^2.8.4",
     "rollup": "^3.19.1",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^5.0.2"
   }
 }
