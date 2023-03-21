@@ -14,7 +14,6 @@ importers:
       eslint: ^8.36.0
       eslint-config-prettier: ^8.7.0
       eslint-plugin: link:@@typescript-eslint/eslint-plugin
-      eslint-plugin,: link:@typescript-eslint/eslint-plugin,
       eslint-plugin-prettier: ^4.2.1
       husky: ^8.0.3
       prettier: ^2.8.4
@@ -33,7 +32,6 @@ importers:
       eslint: 8.36.0
       eslint-config-prettier: 8.7.0_eslint@8.36.0
       eslint-plugin: link:@@typescript-eslint/eslint-plugin
-      eslint-plugin,: link:@typescript-eslint/eslint-plugin,
       eslint-plugin-prettier: 4.2.1_eqzx3hpkgx5nnvxls3azrcc7dm
       husky: 8.0.3
       prettier: 2.8.4
@@ -41,6 +39,15 @@ importers:
       rollup-plugin-generate-package-json: 3.2.0_rollup@3.19.1
       rollup-plugin-typescript2: 0.34.1_7iejawhbqmte5pthjozf4tfuqy
       typescript: 5.0.2
+
+  packages/react:
+    specifiers:
+      shared: workspace:*
+    dependencies:
+      shared: link:../shared
+
+  packages/shared:
+    specifiers: {}
 
 packages:
 
